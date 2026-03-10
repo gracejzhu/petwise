@@ -68,7 +68,7 @@ Each minigame is implemented in its own TSX file and contains independent physic
 
 Coins earned are proportional to performance, reinforcing the idea that income must be earned to support expenses.
 
-### 📊 Pet Vitals System
+### Pet Vitals System
 Four dynamic status bars:
 * Saturation
 * Happiness
@@ -89,7 +89,7 @@ This mechanic simulates the ongoing responsibility required in real-life pet car
 
 This transforms gameplay into reflective learning.
 
-### ⚠️ Consequence System
+### Consequence System
 
 If any stat reaches zero:
 * `pet.isDead` in `Dashboard.tsx` triggers a death state
