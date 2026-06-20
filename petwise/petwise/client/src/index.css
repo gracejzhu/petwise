@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Our Gorgelicious Soft Pixelated Cute Theme!!! */
+  --font-display: 'Press Start 2P', system-ui;
+  --font-body: 'VT323', monospace;
+
+  /* Base - Soft Cream */
+  --background: 40 100% 98%; 
+  --foreground: 222 47% 15%;
+
+  /* Primary - Mint Green */
+  --primary: 1 1% 1%;
+  --primary-foreground: 0 0% 100%;
+
+  /* Secondary - Soft Pink */
+  --secondary: 340 70% 90%;
+  --secondary-foreground: 340 70% 40%;
+
+  /* Accent - Pastel Yellow */
+  --accent: 48 100% 85%;
+  --accent-foreground: 48 100% 20%;
+
+  /* Muted */
+  --muted: 40 20% 90%;
+  --muted-foreground: 40 10% 40%;
+
+  /* Cards */
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 15%;
+
+  /* Borders - Soft Brown/Gray */
+  --border: 30 15% 85%;
+  --input: 30 15% 85%;
+  --ring: 158 55% 65%;
+
+  /* Status Colors */
+  --health-good: 158 55% 55%;
+  --health-warning: 45 90% 70%;
+  --health-critical: 0 80% 80%;
+  
+  --radius: 0px; 
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    image-rendering: pixelated;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+    background-image: radial-gradient(hsl(var(--primary) / 0.1) 2px, transparent 2px);
+    background-size: 32px 32px;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply font-bold tracking-tight text-foreground lowercase;
+  }
+
+  /* Global Pixel Borders */
+  .pixel-border {
+    border-style: solid;
+    border-width: 4px;
+    border-image-slice: 2;
+    border-image-width: 1;
+    border-image-outset: 0;
+    border-image-source: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='6' height='6'><path d='M2 0h2v2h2v2H4v2H2V4H0V2h2z' fill='currentColor'/></svg>");
+  }
+
+  /* Theme-aware border colors */
+  .theme-border {
+    border-color: var(--theme-border-color, #000000) !important;
+    border-width: 4px;
+    border-style: solid;
+  }
+
+  .theme-shadow {
+    box-shadow: 4px 4px 0px 0px var(--theme-border-color, #000000) !important;
+  }
+
+  .theme-text {
+    color: var(--theme-text-color, inherit) !important;
+  }
+}
+
+@layer components {
+  .pixel-box {
+    @apply bg-white border-4 border-foreground shadow-[4px_4px_0px_0px_rgba(0,0,0,1)];
+    position: relative;
+    border-radius: 0 !important;
+  }
+
+  .pixel-button-cute {
+    @apply relative font-display text-sm px-6 py-2 bg-primary text-white transition-all active:translate-y-1 active:shadow-none border-4 border-foreground;
+    box-shadow: 0 4px 0 0 rgba(0,0,0,1);
+    border-radius: 0 !important;
+  }
+  
+  .glass-panel {
+    @apply bg-white border-4 border-foreground shadow-[6px_6px_0px_0px_rgba(0,0,0,1)];
+    border-radius: 0 !important;
+  }
+}
