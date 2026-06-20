@@ -176,7 +176,7 @@ Created for FBLA Introduction to Programming Competition.
 Graphics and music assets organized through a shared GitHub repository.
 
 ## Templates and Libraries
-As per the FBLA [Event Name] requirements, the following external tools were used in this project:
+As per the FBLA Introduction to Programming requirements, the following external tools were used in this project:
 
 *   **Tailwind CSS (Framework):** Used for building the user interface and responsive layout using utility classes.
 *   **Lucide React:** Used for icons and visual elements.
