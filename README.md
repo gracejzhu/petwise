@@ -137,8 +137,7 @@ Each file is responsible for a specific feature, improving maintainability and s
 
 ## Development Process
 
-PetWise was developed using Replit for coding, testing, and debugging.
-Tailwind CSS enabled rapid interface design, while TypeScript improved organization and reduced runtime errors.
+PetWise was developed using Tailwind CSS enabled rapid interface design, while TypeScript was used to improve organization and reduced runtime errors.
 
 The project was built using modular components so features could be expanded easily in future versions.
 
